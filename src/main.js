@@ -15,6 +15,16 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 
+import HintButton from './components/HintButton'
+import CategorySelector from './components/CategorySelector'
+import * as API from './api'
+import './plugins/vcharts'
+
+Vue.component(CategorySelector.name, CategorySelector)
+Vue.component(HintButton.name, HintButton)
+Vue.prototype.$API = API
+Vue.prototype.$BASE_API = process.env.VUE_APP_BASE_API
+
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
